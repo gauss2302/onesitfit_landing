@@ -67,7 +67,7 @@ export default function Home() {
               {/* Person Image */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white/50">
                 <Image
-                  src="/hero_person1.png"
+                  src="/hero_person1_bg.png"
                   alt="Office worker staying active"
                   width={600}
                   height={800}
@@ -145,8 +145,8 @@ export default function Home() {
             </div>
 
             {/* Tall Card */}
-            <div className="md:row-span-2 bg-zinc-50 rounded-3xl p-8 shadow-sm border border-zinc-100 hover:shadow-md transition-shadow flex flex-col justify-between group">
-              <div>
+            <div className="md:row-span-2 bg-zinc-50 rounded-3xl p-8 shadow-sm border border-zinc-100 hover:shadow-md transition-shadow flex flex-col justify-between group overflow-hidden relative">
+              <div className="relative z-10">
                 <div className="w-12 h-12 bg-brand-accent/30 rounded-xl flex items-center justify-center mb-6 text-zinc-700">
                   <Brain />
                 </div>
@@ -156,8 +156,15 @@ export default function Home() {
                   to burnout and reduced creativity.
                 </p>
               </div>
-              <div className="mt-8 flex justify-center">
-                <div className="w-32 h-32 rounded-full border-4 border-zinc-200 border-t-brand-accent animate-spin-slow opacity-50"></div>
+              <div className="mt-8 flex justify-center relative z-0">
+                <div className="relative w-full h-64 md:h-80">
+                  <Image
+                    src="/mental_fatigue.png"
+                    alt="Mental Fatigue Illustration"
+                    fill
+                    className="object-contain object-bottom transform group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
               </div>
             </div>
 
